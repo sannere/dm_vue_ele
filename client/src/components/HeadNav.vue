@@ -6,7 +6,7 @@
       </el-col>
       <el-col :span="6" class="user">
         <div class="userinfo">
-          <!-- <img src="user.avatar" class="avatar" alt="" /> -->
+          <img src="user.avatar" class="avatar" alt="" />
           <div class="welcome">
             <p class="name comename">歡迎</p>
             <p class="name avatarname">{{ user.name }}</p>
@@ -36,7 +36,20 @@ export default {
     user () {
       return this.$store.getters.user;
     }
-  }
+  },
+  methods: {
+    setDialogInfo (cmdItem) {
+      //console.log(cmdItem);
+      switch (cmdItem) {
+        case 'Info':
+          this.showInfoList();
+          break;
+        case 'logout':
+          this.logout();
+          break;
+      }
+    }
+  },
 };
 </script>
 

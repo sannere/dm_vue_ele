@@ -1,5 +1,5 @@
-const path = require('path')
-const debug = process.env.NODE_ENV !== 'production'
+const path = require('path');
+const debug = process.env.NODE_ENV !== 'production';
 
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production' ? '/' : '/',
@@ -13,7 +13,7 @@ module.exports = {
     // webpack配置，值位对象时会合并配置，为方法时会改写配置
     if (debug) {
       // 开发环境配置
-      config.devtool = 'cheap-module-eval-source-map'
+      config.devtool = 'cheap-module-eval-source-map';
     } else {
       // 生产环境配置
     }
@@ -61,4 +61,4 @@ module.exports = {
     },
     before: app => {}
   }
-}
+};
